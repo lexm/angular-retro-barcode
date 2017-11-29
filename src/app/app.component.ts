@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Retro Barcode Generator';
+  colors = [];
+  
+  constructor() {}
+
+  ngOnInit() {
+    // this.title = 'Retro Barcode Generator';
+    for(let i = 0; i < 10; i++) {
+      let newColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      this.colors.push(newColor);
+    }
+  }
 }
